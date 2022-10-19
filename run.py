@@ -1,7 +1,9 @@
 from app import pity
-
+from app.utils import Log
 @pity.route('/')
 def helloworld():
+    log=Log("helloworld")
+    log.info("test")
     return "helloworld"
 
 if __name__=="__main__":
