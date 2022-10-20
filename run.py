@@ -1,5 +1,7 @@
 from app import pity
 from app.utils import Log
+from app import dao
+
 @pity.route('/')
 def helloworld():
     log=Log("helloworld")
