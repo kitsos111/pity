@@ -1,4 +1,6 @@
-from app.models import db
 from app.models.user import User
+from app.models import db
+from app import pity
 
-db.create_all()
+with pity.app_context():
+    db.create_all()

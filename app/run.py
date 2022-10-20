@@ -1,6 +1,11 @@
 from app import pity
-from app.utils import Log
+from app.utils.logger import Log
 from app import dao
+from app.controller.auth.user import auth
+from app.controller.auth.UserDao import UserDao
+
+pity.register_blueprint(auth)
+
 
 @pity.route('/')
 def helloworld():

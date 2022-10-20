@@ -1,6 +1,6 @@
 import logbook
 from app import pity
-from app.decorator import Singletondecorator
+from app.utils.decorator import Singletondecorator
 
 @Singletondecorator
 class Log(object):

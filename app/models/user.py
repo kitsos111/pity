@@ -1,6 +1,7 @@
 from datetime import datetime
 from app.models import db
 
+
 class User(db.Model):
     id = db.Column(db.INT, primary_key=True)
     username = db.Column(db.String(16), unique=True, index=True)
@@ -13,6 +14,7 @@ class User(db.Model):
     deleted_at = db.Column(db.DATETIME)
     last_login_at = db.Column(db.DATETIME)
 
+
     def __init__(self,username,name,password,email):
         self.name=name
         self.username=username
@@ -21,6 +23,7 @@ class User(db.Model):
         self.created_at=datetime.now()
         self.updated_at=datetime.now()
         self.role=0
+
 
     def __repr__(self):
         return "<User %s>"%self.username
